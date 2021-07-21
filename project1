@@ -1,20 +1,483 @@
-from tkinter import *
-from tkinter.ttk import*
+#The stop denotes the last index position of the list.
+#The step is used to skip the nth element within a start:stop
+lst1 = [30, 1, 12, 14, 10, 0]
+print(len(lst))
+lst1.append(40)
+lst1.insert(1, 43)
+lst1.extend([1, 43])
+lst1.remove(1)
+lst1.pop(1)
+lst1.pop()
+lst1.sort()
+lst1.reverse()
+lst1.clear()
 
-from time import strftime
+lst = [ 'Blue', 'Black', 'Red', 'Green']
+print(lst[2].swapcase())
 
-root=Tk()
-root.title("my clock")
+#printing string with an input using .split function
+import random
+stri = input('any kind of string: ')
+lst5 = stri.split(',')
+print(lst5)
+print(random.choice(lst5))
+""" random.shuffle(lst1)"""
+'''
+import random
+lst1 = [2,4,23,45,56]
+random.shuffle(lst1)
+print(lst1)'''
+'''lst.index(1)
+lst.count(1)
+len(lst)
+max(lst)
+min(lst)
+sum(lst)'''
+'''list(range(2,12,2))
+list(range(12,2,-2))
+# list(range(12,2,2)) (gives empty list)
+#list(range(2,12,-2)) (gives empty list)
+#list(range(12,2)) (gives empty list)
+for a in [1,2,3]:
+         print(a)
+for i in {2,3,3,4}:
+        print(i)
+for i in 'wisdom':
+        print(i)
+list=['Romanian','Spanish','Gujarati']
+for i in range(len(list)):
+        print(list[i])
 
 
-def time():
-    string = strftime('%H:%M:%S %p')
-    label.config(text=string)
-    label.after(1000, time)
+
+list1 = [30, 1, 2, 1, 0]      
+
+[x for x in list1 if x > 1]
+[x for x in range(0, 10, 2)]
+[x for x in range(10, 0, -2)]
+1)list1 = [30, 1, 2, 1, 0]
+x=0
+1) for x in list1:
+    if x > 1:
+        print(x)
+        '''
+'''s1 = "welcome"
+s1 = s1.split('o')
+print(s1)'''
+'''lst = [1, 2, 3, 4, 5, 6]
+
+for i in range(1, 6):
+    lst[i] = lst[i - 1]
+print(lst)
+
+'''
+'''isCovered = 99 * [False]
+endOfInput = False
+while not endOfInput:
+ s = input("Enter a line of numbers separated by spaces: ")
+ items = s.split()
+ lst = [eval(x) for x in items]
+
+ for number in lst:
+    if number == 0:
+       endOfInput = True
+    else:
+     isCovered[number - 1] = True
+allCovered = True
+for i in range(99):
+    if not isCovered[i]:
+       allCovered = False
+    break
+
+# Display result
+if allCovered:
+    print("The tickets cover all numbers")
+else:
+      print("The tickets don't cover all numbers")
+'''
+'''A,B,C = eval(input('enter three numbers : '))
+if A == B and B == C :
+    print(3)
+elif A==B and A!= C :
+    print(2)
+elif A == C and C!=B:
+    print(2)
+else :
+    print(0)'''
+'''
+
+def intersection_list(list1, list2):
+    list3 = [list(filter(lambda x: x in list1, sublist)) for sublist in list2]
+    return list3
+list1 = [10, 9, 17, 40, 23, 18, 56, 49, 58, 60]
+list2 = [[25, 17, 23, 40, 32], [1, 10, 13, 27, 28], [60, 55, 61, 78, 15, 76]]
+print(intersection_list(list1, list2))'''
+
+'''lst1= [6,9,6,23,12,19,14,26]
+lst2=list(dict.fromkeys(lst1))
+lst2.remove(6)
+print(lst2)
+'''
+
+'''
+def intersection_list(list1, list2):
+    list3 = [list(filter(lambda x: x in list1, list2)) ]
+    return list3
 
 
-label = Label(root,font=("ds-digital", 80), backgroud = "black" , foreground = "cyan")
-label.pack(anchor='center')
-time()
+list1 = [10, 9, 17, 40, 23, 18, 56, 49, 58, 60]
+list2 = [[25, 17, 23, 40, 32], [1, 10, 13, 27, 28], [60, 55, 61, 78, 15, 76]]
+print(intersection_list(list1, list2))'''
 
-mainloop()
+'''nestedlist = [[10, 20, 30], [30, 50, 60], [40, 60, 70], 70]
+flattenlist = lambda nestedlist: [item for element in nestedlist for item in flattenlist(element)] if type(nestedlist) is list else [nestedlist]
+print("The Nested list:", nestedlist)
+print("The Flattened List:", flattenlist(nestedlist))
+'''
+'''
+X = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+
+Y = [[10, 11, 12],
+     [13, 14, 15],
+     [16, 17, 18]]
+
+Result = [[0, 0, 0],
+          [0, 0, 0],
+          [0, 0, 0]]
+for i in range(len(X)):
+    for j in range(len(Y[0])):
+        Result[i][j] = X[i][j] + Y[i][j]
+for r in Result:
+    print(r)'''
+
+'''def transpose:
+   X = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+
+   Y = [[10, 11, 12],
+     [13, 14, 15],
+     [16, 17, 18]]
+
+Result = [[0, 0, 0],
+          [0, 0, 0],
+          [0, 0, 0]]
+for i in range(len(X)):
+    for j in range(len(Y[0])):
+        for k in range(len(Y)):
+            Result[i][j] += X[i][k] * Y[k][j]
+for r in Result:
+    print(r)'''
+
+'''num = float(input("Enter a number: "))
+
+if num > 0:
+    print("{0} is a positive number".format(num))
+elif num == 0:
+    print("{0} is zero".format(num))
+else:
+    print("{0} is negative number".format(num))'''
+'''
+
+num = int(input("Enter a number: "))
+factorial = 1
+if num < 0:
+   print(" Factorial does not exist for negative numbers")
+elif num == 0:
+   print("The factorial of 0 is 1")
+else:
+   for i in range(1,num + 1):
+       factorial = factorial*i
+   print("The factorial of",num,"is",factorial)'''
+'''A = [2,3,4,5,6,7,8]
+A.pop()
+print(A)'''
+'''a = input('enter the date of birth in format DD/MM/YYY:')
+a = [a]
+b = a[1:]
+print(b)'''
+
+'''def transpose():
+
+    A = [[1, 2, 3],
+        [4, 5, 6],
+         [7, 8, 9]]
+
+   B = [[10, 11, 12],
+       [13, 14, 15],
+       [16, 17, 18]]
+
+Result = [[0, 0, 0],
+          [0, 0, 0],
+          [0, 0, 0]]
+for i in range(len(A)):
+    for j in range(len(B[0])):
+        for k in range(len(B)):
+            Result[i][j] += A[i][k] * B[k][j]
+for r in Result:
+    print(r)'''
+
+'''matrix = [[]]
+number_of_rows = eval((input('enter number of rows :')))
+number_of_columns = eval((input('enter number of columns :')))
+for columns in range(number_of_columns):
+    matrix.append([])
+    for columns in range(number_of_columns):
+        value = eval(input('enter elements,press enter :'))
+        matrix[columns].append(value)
+print(matrix)'''
+
+'''A = [[1, 2, 3]]
+
+B = [[10, 11, 12]]
+
+Result = [[0, 0, 0]]
+for i in range(len(A)):
+    for j in range(len(B[0])):
+            Result[i][j] = A[i][j] + B[i][j]
+for r in Result:
+    print(r)
+'''
+lst3 = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+lst3.remove("cherry")
+lst3.remove("kiwi")
+lst3.remove("melon")
+lst3.append("gava")
+lst3.append("peach")
+lst3.reverse()
+print(lst3)
+print(len(lst3))
+#elementss one by one
+
+#TUPULES
+#Tuples are immutuable
+#we can add elements in tuple
+tup = (1,2,3,4,5,56,24,45,32)
+tup = tup + (6,7)
+print(tup)
+tup1 = ('a','b','c')
+TUP = (tup ,tup1)
+#or TUP = (tup + tup1)
+#OR TUP = (*tup ,*tup1)
+print(TUP)
+#Tuple elements cannot be removed
+print(tup1.index('c')) #index number in tuples
+print(tup1.count('c')) #counts how many times a certain element is present in the list
+#remove and .append functions cannot be accessed in python
+print(sorted(tup)) # sorts the elements in the tupule \n
+#but as the list is created by this process so we would rather use the process by assigning the tupule
+print((tuple(sorted(tup))))
+#sum
+tpl = ( 12, 17, 11, 21)
+print(sum(tpl))
+
+tpl = (1,)
+tpl += (2,)
+print(tpl)
+
+#SETS
+#sets cannot return the same elements more than 1 time
+#we cannot add one set to another
+#we cannot access the indexes in sets
+#sets cannot be modified using slice syntax
+#set is an un ordered list
+
+#QUESTION (remove the duplicate in the list and print the list
+lst = [0, 12, 3, 4, 12, 4, 12, 34, 12, 33, 7, 8, 2, 90, 23, 45, 12, 33]
+seT = set(lst)
+print(list(seT))
+
+sET = {1,2,3,4,5,6,7}
+SET = {10,11,23,45,67}
+sET.update(SET)# only this way is used to concatinate sets
+print(sET)
+#sET.remove() # and so on (use . to further explore)
+#DIFF BW remove and discard is that remove will give an error if the certain element is not present in the set
+st1 = {1, 2, 3, 4, 5, 6, 7}
+st1.clear()
+print(st1)
+#Question
+st = { 1, 2, 4, 6, 8, 9, 12, 16, 15}
+st.remove(9)
+st.remove(15)
+st2= {10,14,18}
+st.update(st2)
+print(st)
+
+#builtin set mathematical functions
+#Union symbol |
+st3 = {1,2,3,4}
+st4 ={2,4,6,7,8}
+#st3 = st3 | st4
+#print(st3)
+
+# Intersection
+print(st3 & st4)
+#difference
+print(st3-st4) # means elements of st3 which are not present in st4
+# symmetric difference
+print(st3 ^ st4 ) #it means that the elemnts wchich are not present in either 1 or 2 of the both
+
+#Dictionaries
+DICT = {'A': 20 , ' B': 30}
+print(DICT)
+print(DICT.keys()) # prints all the keys in the terminal
+print(DICT['A'])  # prints value stored in the key
+
+#assigning values to the keys
+dicT = ('a','b','c')
+'''val = (4,5,6)
+dt = dict.fromkeys(dicT,val)
+print(dt)
+'''
+dt = dict.fromkeys(dicT)
+dt['a'] = 1
+dt['b'] = 1
+dt['c'] = 1
+print(dt)
+dt.pop('a')
+print(dt)
+
+#a dictionary cannot contain similar values
+
+
+#LOOPS
+l = 45
+while l <= 100 :
+  print('loop')
+  l *= 1.25
+#if-else
+#while loop
+#for loop
+'********************************************************************'
+
+#FUNCTIONS =====> USER DEFINED
+#def keyword is used at the start
+def sum():
+    sum1 = 34 +56 +76+89+75+66744676
+    print(sum1)
+sum()
+#arguments
+def greet(name):
+    print('have a nice day' + (name))
+greet(name='jake')
+#similarly we can add two arguments \n
+#and if in this case any of thearguments is missing we will get error
+'''def cards(name='ab',numbers= 18):
+    if name =='ab' or numbers ==18:
+      print('Name' + (name))
+      print('numbers'+str(numbers)) # str upr kisi jga use hoa hai is lea error de rha hai wrnqa code is right
+cards(name='ab',numbers=18)
+'''
+#ARBITRARY FUNCTIONS
+def addition(*n): # * is used to accept a number of various arguments or values
+    sum1=0
+    for number in n:
+        sum1 += number
+
+    print(sum1)
+addition(12,3,4,5,6,73,674,25)
+
+
+def info(**kw): #multiple arbitrary keywords
+    for k,v in kw.items():
+        print(k,':',v)
+info(name= 'ab',
+     age = 18,
+marks =94 )
+
+#returning values from the user defined functions using return keyword
+def subtract(*n):
+    sub = 0
+    for num in n:
+        sub-=num
+    return sub
+subt = subtract(-20,50)
+print(subt)
+
+#PASS keyword is used to avoid the errors
+#LAMBDA FUNCTION is used to allocate a function without even defining it
+sum = lambda a,b: a*b
+print(sum(12,2))
+#creating list of sorted unique elements using remover functions
+lst = [1,2,3,4,5,6,7,8,93,4,5,6,7,8]
+def remove_dup(l):
+    rem_dup = set(l)
+    b = list(rem_dup)
+    b.sort()
+    return b
+print(lst)
+print(remove_dup(lst))
+
+#creating a function to smartly round the decimal points  in result of addition
+'''def sm_d(*n):
+    sm = 0
+    d = []
+    for num in n:
+        sm+=num
+        Num = str(num).split('.')
+        d.append(len(Num[1]))
+    min_d = min(d)
+    return round(sm,min_d)
+print(sm_d(1.345,2.4566,234.6675,56.77778))
+'''
+#ERROR HANDLING IN PYTHON
+# TYPES 1) SYNTAX 2)EXCEPTION ERROR
+#USE OF try AND except:
+try:
+    num1 = int(input('Number1_'))
+    num2 = int(input('Number2_'))
+    print(num1/num2)
+except ZeroDivisionError:
+    print('0 cannot divide a number')
+except  ValueError:
+    print('enter value')
+except  EnvironmentError:
+    print('environment error')
+
+except  OverflowError : #and so on errors
+    print('overflow error')
+except:
+    print('something went wrong')
+
+"""class ZeroCubeError(Exception):
+  ''' O can't be passed as a cube'''
+class Cube():
+  def __init__(self,number4):
+     number4 = int(number4)
+     if number4 != 0:
+         self.qub= number4**3
+     else:
+         pass
+
+def Cube(number):
+   ''' this function cubes numbers\n Cube = number**3'''
+   print(number**3)
+
+print(help((Cube)))
+ #OR
+class ZeroCubeError(Exception):
+  ''' O can't be passed as a cube'''
+class Cube():
+  def __init__(self,number4):
+     number4 = int(number4)
+     if number4 != 0:
+         self.qub= number4**3
+     else:
+         raise ZeroCubeError
+try:
+    number5 = Cube(input('Number_'))
+    number5 = Cube(input('Number_'))
+except ZeroCubeError:
+    print(ZeroCubeError.__doc__)
+else :
+    print('Quotient:'+str(number5))
+    print('cube :'+str((number5).qub))
+finally:
+    print('execution completed')
+
+"""
+#JO REHTE HAIN TOPICS UNKO 15 APPLICATIONS BNANE K \n
+# BAD DOBAARAA KRNA AUR JAVATPOINT PLUS DATA FLAIR SE BHEE ADD KRNA
