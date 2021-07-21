@@ -1,3 +1,135 @@
+#A python file is also called module eg in this main.py is module and a python file
+# we use (#) for making comments and what are comments ? Comments are the lines with the prefix hash \n
+# which are not executed by python and every line with a prefix hash is ignored by python
+# comments are used to assist a progmrammer in increasing the readability of the code
+#DATA TYPES(are used to creat codes >programs> applications) \n
+#data types are abc of programming languages
+#1)Strings(str)
+#      syntax of strings is "xyz" or 'xyz'
+print(str('python'))
+#2)Integers(int)
+
+#3)Float(flt)
+
+#4)Complex
+print(4+5j)
+
+#sets cannot store same numbers
+#lists can be changed while tupules cannot
+s = {1,2,2,1}
+print(s)
+
+#VARIABLES
+A = 'Gene'
+A = 'BOOKS'
+print(A)
+#it will print last assigned value
+C,D = 1 ,2
+print(C,D)
+#variable name must be started with a letter andd can't be started with a number
+#python variables are case sensitive
+# we can't use variable nam with any of the 33 keywords
+
+
+
+
+#STRINGS
+#wrong approach
+#b = 'it's python'
+#right approach
+b = "it's python"
+#or
+a = 'it\'s python'
+print(b)
+print(a)
+# use of triple single quotes ''' or tripple double quotes is to keep the string \n
+# in multiple lines without causing error
+#example:
+c = '''be 
+brave'''
+#or
+d = """ be 
+brave """
+print(c)
+print(d)
+#uses of back slashes
+# use of \n
+backslash_n = 'so we are learning \n python'
+#use of \t
+backslash_t = 'so we are learning \t python'
+print(backslash_n)
+print(backslash_t)
+#we can concatenate two strinfgs with + operator
+print(backslash_n+backslash_t)
+#use of backslash only
+backslash = 'python\
+strings'
+print(backslash)
+#strings are indexed in python with 0 indexing
+#INDEXING
+str = 'Master Master has tried beginner has failed failed more'
+p = (str[0:6])
+q = (str[7:23])
+r = (str[24:43])
+t = (str[44:450])
+u = (str[51:])
+print(p)
+print(q)
+print(r)
+print(t)
+print(u)
+#CAPITALIZATION
+str1 = 'Master Master has tried beginner has failed failed more'
+print(str1.capitalize()) # first letter capitalized
+print(str1.upper()) # all letters capitalized \n
+# explore more . functions
+print(len(str)) # checks the length of the string
+Str = 'Head on the hills'
+print(Str[-9:].capitalize())
+#TO FIND THE UNICODE VALUE USE THE ord() function
+str2 = 'b'
+print(ord(str2))
+#TO FIND THE TRANSLATED UNICODE LETTER USE THE chr() function
+str3 = 89
+print(chr(str3))
+#NUMERIC DATA TYPES
+h,i,k = 3, 4.5, 7 + 3j #int,float,complex
+print(h*k)
+#imaginary part is a float
+print(k.imag)
+#Functions in numeric data type
+#abs Gives absolute value
+#pow Takes the power of the given number
+#divmod Gives quotient and remainder
+#min() Gives minimum value
+#max() Gives maximum value
+#round gives the round off value to the required index we want
+#floor round off to value before point
+#ceiling round off to value 1 more than the point
+num1, num2, num3 = 112, 20.45 , 7 +3j
+print(num1+num2+num3)
+num4 = print((num2*num3))
+num = print(divmod(num1,num2))
+print((num))
+print(num4)
+'''print(round(num,2))
+print(round(num4,2))'''
+'''***************************************************************'''
+#boolean values are used to print the true and false
+number1 = 67
+number2 = 76
+print(bool(number1>number2))
+#incase of bool , non zero values , zero values and empty strings give false answer
+
+#LISTS
+
+lst = ['red','yellow','blue','black','white']
+print(len(lst))
+#start / stop / step
+#list_varible(start:stop:step)
+Var = [ 1,2,3,4,5 ]
+print(Var[0:4:2]) # it means to reach out 3 by writing 1 on 0 index and skipping 2
+#The start denotes the starting index position of the list.
 #The stop denotes the last index position of the list.
 #The step is used to skip the nth element within a start:stop
 lst1 = [30, 1, 12, 14, 10, 0]
